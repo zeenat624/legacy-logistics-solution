@@ -51,6 +51,15 @@ insert into truck_telemetry_partitioned
 select * from truck_telemetry
 where timestamp >= '2025-02-01' and timestamp < '2025-03-01';
 
+create index idx_2025_01 on truck_telemetry_2025_01 (truck_license_plate, timestamp );
+create index idx_2025_02 on truck_telemetry_2025_02 (truck_license_plate, timestamp );
+create index idx_2025_03 on truck_telemetry_2025_03 (truck_license_plate, timestamp );
+create index idx_2025_04 on truck_telemetry_2025_04 (truck_license_plate, timestamp );
+create index idx_2025_05 on truck_telemetry_2025_05 (truck_license_plate, timestamp );
+
+
+
+
 
 
 
